@@ -1,9 +1,20 @@
 "use strict";
-class Department {
+class Person {
     constructor(n) {
-        this.name = n;
+        this.age = 30;
+        if (n) {
+            this.name = n;
+        }
+    }
+    greet(phrase) {
+        if (this.name) {
+            console.log(`${phrase} ${this.name}`);
+        }
+        else
+            console.log("Hi");
     }
 }
-const accounting = new Department("Accounting");
-console.log(accounting);
+let user1;
+user1 = new Person();
+user1.greet("Hi there i am");
 //# sourceMappingURL=app.js.map
